@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "337856183950",
+    "project_id": "classroommad",
+    "storage_bucket": "classroommad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337856183950:android:222a0be79adb26d08493df",
+        "android_client_info": {
+          "package_name": "com.codewithash.googleclassroomclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "337856183950-7i9mjgho9lriq54so5hcqipe44n2pmkb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJWmapmhULjnUCNE1Uy0eN6H0XwgVPULc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "337856183950-7i9mjgho9lriq54so5hcqipe44n2pmkb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
