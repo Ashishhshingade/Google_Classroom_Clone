@@ -29,9 +29,9 @@ class _ClassesState extends State<Classes> {
         title: const Text(
           'Google Classroom',
           style: TextStyle(
-              fontWeight: FontWeight.w400, color: Colors.black87,
-              fontFamily: "Roboto"
-          ),
+              fontWeight: FontWeight.w400,
+              color: Colors.black87,
+              fontFamily: "Roboto"),
         ),
         actions: [
           CircleAvatar(
@@ -46,30 +46,31 @@ class _ClassesState extends State<Classes> {
                             onPressed: () {},
                             child: const Text('Refresh',
                                 style: TextStyle(
-                                    color: Colors.black,fontWeight: FontWeight.w400,
-                                    fontFamily: 'Roboto',fontSize: 14
-                                )
-                            )
-                        )
-                    ),
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: 'Roboto',
+                                    fontSize: 14)))),
                     PopupMenuItem(
                         child: TextButton(
                             onPressed: () {},
-                            child: Text(
+                            child: const Text(
                               'Send Google Feedback',
                               style: TextStyle(
-                                  color: Colors.black,fontFamily: 'Roboto',
-                                  fontWeight: FontWeight.w400,fontSize: 14
-                              ),
-                            )
-                        )
-                    ),
-                PopupMenuItem(
-                    child: TextButton(onPressed: (){
-                      final provider = Provider.of<GoogleSignInProvider>(context,listen:false);
-                      provider.logOut();
-                    },
-                      child: Text('sign out'),))
+                                  color: Colors.black,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14),
+                            ))),
+                    PopupMenuItem(
+                        child: TextButton(
+                      onPressed: () {
+                        final provider = Provider.of<GoogleSignInProvider>(
+                            context,
+                            listen: false);
+                        provider.logOut();
+                      },
+                      child: Text('sign out'),
+                    ))
                   ])
         ],
         titleSpacing: 0,
@@ -84,9 +85,9 @@ class _ClassesState extends State<Classes> {
             return GestureDetector(
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
                   builder: (_) => ClassRoomPage(
-                      uiColor: classRoomList[index].uiColor,
-                      className: classRoomList[index].className,
-                      bannerImg: bannerImageList[index],
+                        uiColor: classRoomList[index].uiColor,
+                        className: classRoomList[index].className,
+                        bannerImg: bannerImageList[index],
                       ))),
               child: Stack(
                 children: [
@@ -163,25 +164,27 @@ class _ClassesState extends State<Classes> {
   }
 }
 
-void bottomSheet(context){
+void bottomSheet(context) {
   showModalBottomSheet(
-      context: context, builder: (BuildContext bc){
-    return Container(
-      child: Wrap(
-        children: <Widget>[
-          ListTile(
-              title:Text('Create Class'),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateClass()));
-              }
+      context: context,
+      builder: (BuildContext bc) {
+        return Container(
+          child: Wrap(
+            children: <Widget>[
+              ListTile(
+                  title: Text('Create Class'),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CreateClass()));
+                  }),
+              ListTile(
+                title: Text('Join Class'),
+                onTap: () {},
+              )
+            ],
           ),
-          ListTile(
-            title: Text('Join Class'),
-            onTap: (){},
-          )
-        ],
-      ),
-    );
-  }
-  );
+        );
+      });
 }

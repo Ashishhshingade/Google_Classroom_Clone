@@ -1,4 +1,8 @@
+import 'package:assignment1/screens/home/classroom/people.dart';
+import 'package:assignment1/screens/home/classroom/stream_tab.dart';
 import 'package:flutter/material.dart';
+
+import 'classroom/classwork_tab.dart';
 // import 'package:googleclassroom_clone/screens/classroom/people_tab.dart';
 //
 // import 'classroom/classwork_tab.dart';
@@ -9,7 +13,10 @@ class ClassRoomPage extends StatefulWidget {
   String className;
   Color uiColor;
 
-  ClassRoomPage({required this.className, required this.bannerImg, required this.uiColor});
+  ClassRoomPage(
+      {required this.className,
+      required this.bannerImg,
+      required this.uiColor});
 
   @override
   _ClassRoomPageState createState() => _ClassRoomPageState();
@@ -29,12 +36,12 @@ class _ClassRoomPageState extends State<ClassRoomPage> {
     String className = widget.className;
     AssetImage bannerImg = widget.bannerImg;
     final tabs = [
-      // StreamTab(
-      //   bannerImg: bannerImg,
-      //   className: className,
-      // ),
-      // ClassWork(),
-      // PeopleTab()
+      StreamTab(
+        bannerImg: bannerImg,
+        className: className,
+      ),
+      ClassWork(),
+      PeopleTab()
     ];
     return Scaffold(
       appBar: AppBar(
@@ -76,7 +83,6 @@ class _ClassRoomPageState extends State<ClassRoomPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.people),
             label: 'People',
-
           ),
         ],
         currentIndex: _selectedIndex,
