@@ -33,8 +33,8 @@ class _PeopleTabState extends State<PeopleTab> {
         ),
         SizedBox(width: 30),
         Container(
-          padding: EdgeInsets.only(top: 30, left: 15, bottom: 10),
-          child: Text(
+          padding: const EdgeInsets.only(top: 30, left: 15, bottom: 10),
+          child: const Text(
             "Classmates",
             style: TextStyle(
                 fontSize: 30, color: Colors.redAccent, letterSpacing: 1),

@@ -49,7 +49,7 @@ class _StreamTabState extends State<StreamTab> {
               children: [
                 SizedBox(width: 10),
                 CircleAvatar(
-                  backgroundImage: AssetImage('Assets/Images/Dp/cat3.jpg'),
+                  backgroundImage: AssetImage('assets/profiles/cat3.jpg'),
                 ),
                 SizedBox(width: 10),
                 Text(
